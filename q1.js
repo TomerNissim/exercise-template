@@ -1,11 +1,15 @@
-function run() {
+    function run() {
     const input = document.getElementById("input").value;
     const output = document.getElementById("output");
     let out = "";
 /**/
-    // write your code here
-    // out = input + 5;
-
+   function isArray(input){
+       if(toString.call(input) === "[object Array]")
+            return true;
+        else 
+            return false;     
+   }
+   out = isArray(JSON.parse(input));
 /**/
     output.innerText = out;
 }
